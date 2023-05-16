@@ -5,45 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog de Jhoan Toro</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/icono-web.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Mi Blog Personal</h1>
     <nav>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de mí</a></li>
-        <li><a href="#">Publicaciones</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobreMi ">Sobre Mi</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul> 
     </nav>
   </header>
-  
+  <div class="background-image"></div>
+  <div class="container">
   <main>
     <section>
-      <h2>Sobre mí</h2>
-      <p>Hola, soy Jhoan Toro, estudiante de tecnología en desarrollo de software. Tengo experiencia en la creación y administración de bases de datos, así como en el desarrollo web utilizando HTML, CSS y JavaScript.</p>
+      <h1 id="inicio">
+        ¡Hola!
+        <br>
+        Soy Jhoan Toro
+        <br>
+        Aspirante a Desarrollador Back-End
+      </h1> 
+      <p class="darkContainer">Convierto tus ideas y proyectos en realidad.</p>
+      <h2 id="sobreMi">Sobre Mi</h2>
+      <p class="darkContainer">Llevo dos años estudiando en la Universidad del Valle tecnología en desarrollo de software para poder mejorar mi carrera, Me apasiona trabajar en equipo y estoy comprometido en buscar soluciones creativas y eficientes para mejorar la experiencia de usuario en aplicaciones web.</p>
     </section>
-    
-    <section>
-      <h2>Publicaciones recientes</h2>
-      <article>
-        <h3>Título de la publicación 1</h3>
-        <p>Contenido de la publicación 1.</p>
-      </article>
-      
-      <article>
-        <h3>Título de la publicación 2</h3>
-        <p>Contenido de la publicación 2.</p>
-      </article>
-      
-      <article>
-        <h3>Título de la publicación 3</h3>
-        <p>Contenido de la publicación 3.</p>
-      </article>
+    <h2 id="skills">Skills</h2>
+    <p class="darkContainerSkills">Estas son algunas de las tecnologías que manejo:</p>
+    <section class="image-gallery">
+      <div class="image-container">
+        <img src="img/html.png" alt="HTML">
+        <p>HTML</p>
+      </div>
+      <div class="image-container">
+        <img src="img/css.png" alt="CSS">
+        <p>CSS</p>
+      </div>
+      <div class="image-container">
+        <img src="img/javascript.png" alt="Javascript">
+        <p>Javascript</p>
+      </div>
+      <div class="image-container">
+        <img src="img/node.png" alt="NodeJs">
+        <p>Node.js</p>
+      </div>
+      <div class="image-container">
+        <img src="img/logo-db.png" alt="DB">
+        <p>Base de Datos</p>
+      </div>
+      <div class="image-container">
+        <img src="img/python.png" alt="Python">
+        <p>Python</p>
+      </div>
+    </section>
+    <section class="contacto">
+      <h2 id="contacto">Contacto</h2>
+      <p class="darkContainer">Si estas interesado en trabajar conmigo o simplemente quieres saludar, puedes contactarme a través de mis redes sociales.</p>
+      <div class="linkContainer">
+        <a href="https://github.com/tjhoan?tab=repositories" target="_blank">
+          <div class="image-container">
+            <img src="img/github.png" alt="GitHub">
+          </div>
+        </a>
+        <a href="https://www.facebook.com/jhoanjose.tororodriguez" target="_blank">
+          <div class="image-container">
+            <img src="img/facebook.png" alt="Facebook" >
+          </div>
+        </a>
+      </div>
     </section>
   </main>
-  
   <footer>
     <p>&copy; 2023 Jhoan Toro - Todos los derechos reservados</p>
   </footer>

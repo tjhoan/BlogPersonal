@@ -1,76 +1,223 @@
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto Mono', monospace;
     background-color: #111;
     color: #fff;
     margin: 0;
     padding: 0;
-  }
-  
-  .container {
-    max-width: 800px;
+    position: relative;
+    padding-top: 100px;
+}
+
+body::-webkit-scrollbar {
+    width: 18px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #111;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+    border: 5px solid #111;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.container {
+    max-width: 70em;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  a {
+}
+
+a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  /* Estilos para el encabezado */
-  header {
-    background-color: #333;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-  }
-  
-  h1 {
-    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 36px;
     margin: 0;
     color: #fff;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
+}
+
+#sobreMi {
+    font-size: 30px;
+    margin: 14em 0 0 0;
+    color: #fff;
+    scroll-margin-top: 10em;
+}
+
+#inicio {
+    font-size: 30px;
+    scroll-margin-top: 8em;
+}
+
+#skills {
+    font-size: 30px;
+    margin-top: 16em;
+    scroll-margin-top: 5em;
+}
+
+#contacto {
+    font-size: 30px;
+    margin-top: 16em;
+    scroll-margin-top: 5em; 
+}
+
+nav {
+    padding-right: 10em;
+}
+
+/* Estilos para el menú */
+nav ul li {
     display: inline-block;
     margin-right: 10px;
-  }
-  
-  /* Estilos para el contenido principal */
-  main {
-    padding: 20px;
-  }
-  
-  h2 {
-    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    margin-left: 5em;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left center;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+nav ul li a:hover:before {
+    transform: scaleX(1);
+}
+
+h2 {
+    font-size: 24px;
     margin-bottom: 10px;
-  }
-  
-  section {
-    margin-bottom: 30px;
-  }
-  
-  article {
-    border-bottom: 1px solid #555;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
-  
-  article h3 {
-    font-size: 18px;
+    color: #fff;
+}
+
+section {
+    margin-bottom: 5em;
+    padding-top: 150px;
+}
+
+article, .darkContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 15em;
+    border-radius: 5px;
+}
+
+.darkContainerSkills {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+
+article h3 {
+    font-size: 20px;
     margin: 0;
+    color: #fff;
+}
+
+p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Estilos para las Skills */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px 20px;
+    margin-bottom: 15em;
+    border-radius: 5px;
+  }
+
+  .image-container {
+    width: 100px;
+    height: 100px;
+    margin: 10px 30px;
+    text-align: center;
   }
   
-  /* Estilos para el pie de página */
-  footer {
-    background-color: #333;
+  .image-container p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff; 
+  }
+  
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/* Estilos para contacto */
+
+.linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em auto 0 auto;
+    width: 20em;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3em 2em;
+    border-radius: 5px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
+    margin-top: 5em;
     text-align: center;
     font-size: 14px;
-  }
-  
+    color: #ccc;
+}
